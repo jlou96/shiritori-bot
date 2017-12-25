@@ -15,7 +15,13 @@ body {
 }
 
 #body {
+  position: absolute;
+  max-height: 60%;
+  width: 100%;
+  top: 15%;
   padding: 0;
+  overflow: auto;
+  text-align: center;
 }
 
 #footer {
@@ -24,7 +30,16 @@ body {
   width: 100%;
 }
 
+#about {
+  margin-left: 30%;
+  position: absolute;
+  padding: 0;
+  overflow: auto;
+  text-align: center;
+}
+
 h1 {
+  font-family: Muli;
   font-size: xx-large;
   text-align: center;
 }
@@ -32,7 +47,6 @@ h1 {
 h2 {
   margin-top: auto;
   width: 100%;
-  font-family: "Noto Sans", "Noto Sans CJK JP", sans-serif;
   font-size: x-large;
 }
 
@@ -46,14 +60,12 @@ h2 a:hover {
 }
 
 h3 {
-  margin-left: 30%;
   text-align: left;
   text-decoration: none;
   font-size: large;
 }
 
 h4 {
-  margin-left: 30%;
   margin-bottom: 0;
   text-align: left;
   text-decoration: none;

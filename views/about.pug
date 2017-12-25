@@ -1,0 +1,54 @@
+extends layout
+
+block content
+  div(id='header')
+    h1.header= title
+    br
+  div(id='body')
+    h2
+      | What is Shiritori?
+    p
+      | Shiritori is a Japanese word game.
+    br
+    p
+      | Each turn, a player says a word that begins with the final kana (character) of the previous word.
+      | For example, if the bot says 検討 (けんとう), you must respond with a word that starts with う.
+    br
+    p
+      | The game ends when a player gives up or says an illegal word.
+      | Illegal words are ones that have already been used or ones that end in ん, as there are no words that begin with ん.
+      | The bot gives up when you completely exhaust its word bank. Congratulations if you manage this!
+    br
+    br
+    h2
+      | Difficulty?
+    p
+      | Shiritori is a game played by people of all levels of Japanese competency.
+      br
+      | To make the game more approachable, there are a few difficulties that change the restrictiveness of the rules.
+    h3
+      | Easy
+    p
+      | Words of all kinds are allowed (nouns, adjectives, verbs).
+      br
+      | You are allowed to repeat up to three words.
+      br
+      | The bot is limited to words classified in the N5-N4 range.
+    h3
+      | Normal
+    p
+      | Only nouns are allowed.
+      br
+      | No word repetition.
+      br
+      | The bot will has access to words within the N5-N1 range.
+    h3
+      | Hard
+    p
+      | The bot has unrestricted access to all words.
+  div(id='footer')
+    ul.centerUL.footer
+      li
+        a(href='/') Home
+      li
+        a(href='https://github.com/jlou96/shiritori-bot') Source

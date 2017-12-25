@@ -1,0 +1,128 @@
+body {
+  color: #dedede;
+  background-color: #212121;
+  font-family: "Noto Sans", "Noto Sans CJK JP", sans-serif;
+  font-size: small;
+  text-align: center;
+}
+
+#header {
+  position: fixed;
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  padding: 0;
+}
+
+#body {
+  padding: 0;
+}
+
+#footer {
+  position: fixed;
+  bottom: -5%;
+  width: 100%;
+}
+
+h1 {
+  font-size: xx-large;
+  text-align: center;
+}
+
+h2 {
+  margin-top: auto;
+  width: 100%;
+  font-family: "Noto Sans", "Noto Sans CJK JP", sans-serif;
+  font-size: x-large;
+}
+
+h2 a {
+  text-decoration: none;
+  color: #dedede;
+}
+
+h2 a:hover {
+  color: #ffffff;
+}
+
+h3 {
+  margin-left: 30%;
+  text-align: left;
+  text-decoration: none;
+  font-size: large;
+}
+
+h4 {
+  margin-left: 30%;
+  margin-bottom: 0;
+  text-align: left;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+p {
+  max-width: 40%;
+  margin: 0 auto !important;
+  float: none !important;
+  text-align: left;
+}
+
+li a {
+  color: #dedede;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: #ffffff;
+}
+
+button {
+  border-style: none;
+  margin: 1% 0;
+  background-color: #212121;
+  color: #dedede;
+  font-size: large;
+}
+
+button:hover {
+  color: #ffffff;
+}
+
+.userInput {
+  /* TODO: Figure out how to justify left without using negative margins */
+  margin-left: -30%;
+  border-style: none;
+  border-radius: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  background-color: #323232;
+  color: #dedede;
+}
+
+ul.centerUL.diff {
+  margin: 2px auto;
+  padding-left: 0;
+}
+
+.centerUL li {
+  display: inline;
+  text-align: center;
+  font-size: 14px;
+}
+
+.centerUL.diff li {
+  padding: 16px;
+}
+
+ul.centerUL.footer {
+  margin-bottom: 5%;
+  padding-left: 0;
+}
+
+.centerUL.footer li {
+  font-size: x-small;
+}
+
+.centerUL.footer li a {
+  padding: 8px;
+}

@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  div(id='header')
+    h1.header= title
+    br
+  div(id='body')
+    h2= ucfirst(diff)
+    br
+    h3 
+      | Bot
+    p
+      | Placeholder
+    br
+    h3 You
+    form(method='POST', action='/game/submit')
+      input(type='text', class='userInput')
+  div(id='footer')
+    ul.centerUL.footer
+      li
+        a(href='/') Home
+      li
+        a(href='https://github.com/jlou96/shiritori-bot') Source

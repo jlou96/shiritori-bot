@@ -1,7 +1,9 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css); 
+
 body {
   color: #dedede;
   background-color: #212121;
-  font-family: "Noto Sans", "Noto Sans CJK JP", sans-serif;
+  font-family: "Noto Sans Japanese", sans-serif;
   font-size: small;
   text-align: center;
 }
@@ -16,7 +18,7 @@ body {
 
 #body {
   position: absolute;
-  max-height: 60%;
+  max-height: 70%;
   width: 100%;
   top: 15%;
   padding: 0;
@@ -32,20 +34,20 @@ body {
 
 #about {
   margin-left: 30%;
-  position: absolute;
   padding: 0;
-  overflow: auto;
   text-align: center;
+  overflow: auto;
 }
 
 h1 {
-  font-family: Muli;
+  font-family: "Muli";
   font-size: xx-large;
   text-align: center;
 }
 
 h2 {
-  margin-top: auto;
+  margin-top: 1%;
+  margin-bottom: 1%;
   width: 100%;
   font-size: x-large;
 }
@@ -73,8 +75,8 @@ h4 {
 }
 
 p {
-  max-width: 40%;
-  margin: 0 auto !important;
+  max-width: 60%;
+  margin: 0 0 !important;
   float: none !important;
   text-align: left;
 }

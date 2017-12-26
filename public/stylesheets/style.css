@@ -1,8 +1,9 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosansjp.css);
+
 body {
   color: #dedede;
   background-color: #212121;
-  font-family: "Noto Sans", "Noto Sans CJK JP", sans-serif;
-  font-size: small;
+  font-family: 'Noto Sans JP', sans-serif;
   text-align: center;
 }
 
@@ -16,9 +17,11 @@ body {
 
 #body {
   position: absolute;
-  max-height: 60%;
-  width: 100%;
   top: 15%;
+  max-height: 70%;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
   padding: 0;
   overflow: auto;
   text-align: center;
@@ -31,11 +34,26 @@ body {
 }
 
 #about {
-  margin-left: 30%;
-  position: absolute;
-  padding: 0;
+  max-height: 35%;
+  padding-left: 8px;
+  padding-right: 8px;
+  text-align: left;
   overflow: auto;
-  text-align: center;
+}
+
+#diff {
+  float: left;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  overflow: auto;
+}
+
+#game {
+  float: left;
+  padding-left: 8px;
+  text-align: left;
+  overflow: auto;
 }
 
 h1 {
@@ -45,8 +63,7 @@ h1 {
 }
 
 h2 {
-  margin-top: auto;
-  width: 100%;
+  margin: 0;
   font-size: x-large;
 }
 
@@ -60,6 +77,7 @@ h2 a:hover {
 }
 
 h3 {
+  margin-bottom: 5px;
   text-align: left;
   text-decoration: none;
   font-size: large;
@@ -73,10 +91,9 @@ h4 {
 }
 
 p {
-  max-width: 40%;
-  margin: 0 auto !important;
+  margin: 0 0 !important;
   float: none !important;
-  text-align: left;
+  font-size: small;
 }
 
 li a {
@@ -89,8 +106,10 @@ li a:hover {
 }
 
 button {
+  display: block;
   border-style: none;
-  margin: 1% 0;
+  margin-top: 2%
+  margin-bottom: 2%;
   background-color: #212121;
   color: #dedede;
   font-size: large;
@@ -101,18 +120,15 @@ button:hover {
 }
 
 .userInput {
-  /* TODO: Figure out how to justify left without using negative margins */
-  margin-left: -30%;
   border-style: none;
   border-radius: 4px;
-  padding-left: 4px;
-  padding-right: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
   background-color: #323232;
   color: #dedede;
 }
 
 ul.centerUL.diff {
-  margin: 2px auto;
   padding-left: 0;
 }
 
@@ -123,7 +139,7 @@ ul.centerUL.diff {
 }
 
 .centerUL.diff li {
-  padding: 16px;
+  padding: 8px;
 }
 
 ul.centerUL.footer {

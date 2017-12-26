@@ -5,16 +5,19 @@ block content
     h1.header= title
     br
   div(id='body')
-    h2= ucfirst(diff)
+    h2= diff
     br
-    h3 
-      | Bot
-    p
-      | Placeholder
-    br
-    h3 You
-    form(method='POST', action='/game/submit')
-      input(type='text', class='userInput')
+    div(id='game')
+      h3 
+        | Bot
+      if tmp
+        p= tmp
+      else
+        p Placeholder
+      br
+      h3 You
+      form(method='POST', action='/game/' + diff)
+        input(type='text', class='userInput')
   div(id='footer')
     ul.centerUL.footer
       li

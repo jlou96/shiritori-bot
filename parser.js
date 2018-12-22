@@ -34,8 +34,8 @@ for (const char of hiragana) {
 // Populate with dictionary entries
 fs.readdirSync(dictionaryDir).forEach(file => {
     const absPath = path.join(dictionaryDir, file);
-    let rawData = fs.readFileSync(absPath);
-    let JSONData = JSON.parse(rawData);
+    const rawData = fs.readFileSync(absPath);
+    const JSONData = JSON.parse(rawData);
     
     for (const entry of JSONData) {
         const word = entry[0];

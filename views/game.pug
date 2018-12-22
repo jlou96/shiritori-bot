@@ -9,9 +9,9 @@ block content
       h3 
         | Bot
       if nextWord
-        p= nextWord
+        p.game= nextWord
       else
-        p 
+        p.game 
       br
       h3 You
       form(method='POST' action='/game')

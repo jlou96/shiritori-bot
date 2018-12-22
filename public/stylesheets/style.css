@@ -87,6 +87,10 @@ p {
   font-size: small;
 }
 
+p.game {
+  text-align: center;
+}
+
 ul > li {
   display: inline-block;
   list-style: none;

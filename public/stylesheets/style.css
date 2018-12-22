@@ -33,7 +33,7 @@ body {
   width: 100%;
 }
 
-#about {
+#content {
   max-height: 35%;
   padding-left: 8px;
   padding-right: 8px;
@@ -41,19 +41,9 @@ body {
   overflow: auto;
 }
 
-#diff {
-  float: left;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-  overflow: auto;
-}
-
-#game {
-  float: left;
-  padding-left: 8px;
-  text-align: left;
-  overflow: auto;
+#aboutGameContent, #aboutDiffContent {
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 h1 {
@@ -78,7 +68,7 @@ h2 a:hover {
 
 h3 {
   margin-bottom: 5px;
-  text-align: left;
+  text-align: center;
   text-decoration: none;
   font-size: large;
 }
@@ -93,7 +83,26 @@ h4 {
 p {
   margin: 0 0 !important;
   float: none !important;
+  text-align: left;
   font-size: small;
+}
+
+ul > li {
+  display: inline-block;
+  list-style: none;
+  padding-right: 1%;
+  padding-left: 1%;
+  justify-content: center; 
+  vertical-align: bottom;
+}
+
+ul.about > li {
+  display: block;
+  list-style: none;
+  font-size: small;
+  text-align: left;
+  margin: 0;
+  padding: 0;
 }
 
 li a {
@@ -106,9 +115,9 @@ li a:hover {
 }
 
 button {
-  display: block;
+  display: flex;
   border-style: none;
-  margin-top: 2%
+  margin-top: 2%;
   margin-bottom: 2%;
   background-color: #212121;
   color: #dedede;

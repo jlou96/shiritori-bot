@@ -2,25 +2,18 @@ extends layout
 
 block content
   div(id='header')
-    h1.header= title
+    h1= title
     br
   div(id='body')
-    h2 #{ucfirst(diff)}
-    br
     div(id='game')
       h3 
         | Bot
       if nextWord
         p= nextWord
       else
-        p Placeholder
+        p 
       br
       h3 You
-      form(method='POST' action='/game/' + diff)
+      form(method='POST' action='/game')
         input(type='text' id='userInput' name='userInput')
-  div(id='footer')
-    ul.centerUL.footer
-      li
-        a(href='/') Home
-      li
-        a(href='https://github.com/jlou96/shiritori-bot') Source
+  include footer.pug

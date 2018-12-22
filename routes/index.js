@@ -1,20 +1,25 @@
 var express = require('express');
-var game = require('../public/javascripts/game');
+var game = require('../game');
 var router = express.Router();
+
+// Index
 
 router.get('/', function(req, res, next) {
     console.log('Home Page');
     res.render('index', { title: 'Shiritori Bot' });
 });
 
-router.post('/game/:diff', function(req, res) {
-    var nextWord = game.nextWord(req.body.userInput);
-    res.render('game', { title: 'Shiritori Bot', diff: req.params.diff, nextWord: nextWord });
+// Game
+
+router.get('/game', function(req, res, next) {
+    console.log('Game Page');
+    res.render('game', { title: 'Shiritori Bot' });
 });
 
-router.get('/game/:diff', function(req, res) {
-    console.log('Game Page');
-    res.render('game', { title: 'Shiritori Bot', diff: req.params.diff });
+router.post('/game', function(req, res, next) {
+    console.log(req.body.userInput);
+    var nextWord = game.nextWord(req.body.userInput);
+    res.render('game', { title: 'Shiritori Bot', nextWord: nextWord });
 });
 
 module.exports = router;

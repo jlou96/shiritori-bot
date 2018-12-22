@@ -45,10 +45,9 @@ fs.readdirSync(dictionaryDir).forEach(file => {
         if (reading && element === 'n') {
             const firstChar = reading.charAt(0);
             const firstHira = wk.toHiragana(firstChar);
-            // Ignore obsolete hiragana
-            if (firstHira in bucketDict) {
+            // Ignore words that are not Japanese or have obsolete readings
+            if (firstHira in bucketDict && wk.isJapanese(word)) {
                 try {
-                    console.log(word);
                     bucketDict[firstHira].add(word);
                 } catch (err) {
                     console.log(entry);
@@ -59,6 +58,10 @@ fs.readdirSync(dictionaryDir).forEach(file => {
     }
 });
 
+// Convert bucketDict values from Sets to Arrays to stringify
+for (const [key, val] of Object.entries(bucketDict)) {
+    bucketDict[key] = Array.from(val);
+}
 
 // Write bucketDict to JSON 'database' file
 const dbPath = path.join(__dirname, 'data', 'database.json');

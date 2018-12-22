@@ -45,8 +45,10 @@ fs.readdirSync(dictionaryDir).forEach(file => {
         if (reading && element === 'n') {
             const firstChar = reading.charAt(0);
             const firstHira = wk.toHiragana(firstChar);
-            // Ignore words that are not Japanese or have obsolete readings
-            if (firstHira in bucketDict && wk.isJapanese(word)) {
+            const lastChar = reading.charAt(reading.length);
+            const lastHira = wk.toHiragana(lastChar);
+            // Ignore words that are not Japanese, end in ん, or have obsolete readings
+            if (wk.isJapanese(word) && lastHira !== 'ん' && firstHira in bucketDict) {
                 try {
                     bucketDict[firstHira].add(word);
                 } catch (err) {
